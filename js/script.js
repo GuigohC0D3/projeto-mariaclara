@@ -1,8 +1,6 @@
-// script.js
-
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
-const API_URL = "http://192.168.1.140:3000/avaliacoes";
+const API_URL = "https://backend-mariaclara.onrender.com/avaliacoes";
 
 let paginaAtual = 1;
 const limitePorPagina = 3;
@@ -77,7 +75,7 @@ function carregarTodasAvaliacoes() {
   fetch(API_URL)
     .then((res) => res.json())
     .then((res) => {
-      const data = res.data || res; // compatível com { data: [...] } ou [ ... ]
+      const data = Array.isArray(res) ? res : res.data || res;
       todasAvaliacoes = data;
       renderizarPagina();
     })
@@ -114,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nome = form.nome.value.trim();
     const mensagem = form.avaliacao.value.trim();
 
-    if (!nome || !mensagem) return;
+    if (!nome || !messagem) return;
 
     fetch(API_URL, {
       method: "POST",
@@ -142,12 +140,15 @@ window.addEventListener("load", () => {
 // Fade-in das seções ao rolar
 const sections = document.querySelectorAll(".fade-in-section");
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-}, { threshold: 0.1 });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
 
 sections.forEach((section) => observer.observe(section));
