@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="imagex/png"
+      href="./img/WhatsApp_Image_2025-05-17_at_13.05.08-removebg-preview.png"
+    />
+    <title>Maria Clara Abreu Lopes - Psicóloga</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="./img/WhatsApp_Image_2025-05-17_at_13.05.08-removebg-preview.png"
+            alt="Tulipa"
+            class="tulipa"
+            style="height: 75px; width: auto"
+          />
+          Maria Clara Abreu Lopes
+        </div>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre mim</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero / Sobre mim -->
+    <main class="hero fade-in-section" id="sobre">
+      <div class="hero-text">
+        <h1>Maria Clara Abreu Lopes</h1>
+        <h2>Psicóloga em Teresina | Atendimento Particular | CRP: 21/05811</h2>
+        <p>
+          Olá! Me chamo Maria Clara, sou psicóloga com atendimento destinado a
+          mulheres e aqui disponho de um espaço seguro e acolhedor para te
+          auxiliar nos cuidados com a sua saúde mental.
+        </p>
+        <div class="buttons">
+          <a
+            href="https://contate.me/mclaralopespsi"
+            class="btn-outline"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp icon"></i>
+            Agende sua consulta
+          </a>
+
+          <a
+            href="https://www.instagram.com/mclaralopespsi"
+            class="btn-filled"
+            target="_blank"
+          >
+            <i class="fab fa-instagram icon"></i>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div class="hero-image slider">
+        <img
+          src="./img/MariaClara01.jpeg"
+          alt="Maria Clara 1"
+          class="slide active"
+        />
+        <img src="./img/MariaClara02.jpeg" alt="Maria Clara 2" class="slide" />
+        <img src="./img/MariaClara03.jpeg" alt="Maria Clara 3" class="slide" />
+      </div>
+    </main>
+
+    <!-- Avaliações -->
+    <section class="reviews fade-in-section" id="avaliacoes">
+      <h3>O que Meus pacientes dizem</h3>
+      <div class="review-cards" id="reviewCards"></div>
+      <div
+        id="semAvaliacoes"
+        style="display: none; text-align: center; padding: 1rem"
+      >
+        Ainda não há avaliações disponíveis.
+      </div>
+
+      <div
+        class="pagination"
+        style="display: none; text-align: center; margin-top: 1rem"
+      >
+        <button onclick="mudarPagina(-1)" id="prevBtn">Anterior</button>
+        <span id="paginaAtual">Página 1</span>
+        <button onclick="mudarPagina(1)" id="nextBtn">Próxima</button>
+      </div>
+
+      <div class="add-review">
+        <button class="open-modal-btn">Deixe sua avaliação</button>
+      </div>
+    </section>
+
+    <!-- Modal Avaliação -->
+    <div class="modal-overlay" id="reviewModal">
+      <div class="modal">
+        <h3>Deixe sua avaliação</h3>
+        <form id="reviewForm">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <textarea
+            name="avaliacao"
+            rows="4"
+            placeholder="Sua avaliação"
+            required
+          ></textarea>
+          <button type="submit">Enviar</button>
+          <button type="button" class="close-modal-btn">Cancelar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dúvidas -->
+    <section class="faq-form fade-in-section" id="duvidas">
+      <h3>Envie sua dúvida</h3>
+      <form action="https://formsubmit.co/mclaraabreulopespsi@proton.me" method="POST">
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        <input type="email" name="email" placeholder="Seu email" required />
+        <textarea
+          name="mensagem"
+          rows="5"
+          placeholder="Digite sua dúvida aqui..."
+          required
+        ></textarea>
+        <button type="submit">Enviar dúvida</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img
+            src="./img/WhatsApp_Image_2025-05-17_at_13.05.08-removebg-preview.png"
+            alt="Logo"
+            style="height: 75px; width: auto"
+          />
+          <h4>Maria Clara Abreu Lopes</h4>
+          <p>Psicóloga | CRP 21/05811</p>
+        </div>
+
+        <div class="footer-links">
+          <h5>Links rápidos</h5>
+          <ul>
+            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#duvidas">Dúvidas</a></li>
+            <li>
+              <a href="https://www.instagram.com/mclaralopespsi" target="_blank"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h5>Contato</h5>
+          <p>
+            📍 Teresina - PI<br />
+            📧 mclaraabreulopespsi@proton.me<br />
+            📱
+            <a href="https://contate.me/mclaralopespsi" target="_blank"
+              >Agende uma sessão</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Maria Clara Abreu Lopes. Todos os direitos reservados.
+        </p>
+        <p>Desenvolvido com carinho pela <strong>AW Dev Studio ♥</strong></p>
+      </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
