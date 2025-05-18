@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nome = form.nome.value.trim();
     const mensagem = form.avaliacao.value.trim();
 
-    if (!nome || !messagem) return;
+    if (!nome || !mensagem) return;
 
     fetch(API_URL, {
       method: "POST",
